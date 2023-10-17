@@ -3,7 +3,7 @@ const myInstanceOf=(Left,Right)=>{
     return false
   }
   while(Left){
-    if(Left.__proto__===Right.prototype){
+    if(Left.__proto__ === Right.prototype){
       return true
     }else{
       Left=Left.__proto__
@@ -13,4 +13,5 @@ const myInstanceOf=(Left,Right)=>{
 }
 
 //验证
-console.log(myInstanceOf({},Array));  //false
+console.log(myInstanceOf({},Object));//true
+console.log(myInstanceOf({},Array));//false
